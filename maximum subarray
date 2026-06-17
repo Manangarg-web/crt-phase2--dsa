@@ -1,6 +1,6 @@
 Leetcode maximum subarray
 
-brut force
+brute force
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
