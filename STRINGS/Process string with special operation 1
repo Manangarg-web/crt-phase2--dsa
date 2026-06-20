@@ -1,0 +1,42 @@
+leetcode 3612
+time complexity : o(n)
+space complexity:o(1)
+
+class Solution {
+public:
+    string processStr(string s) {
+        string result;
+        int n = s.size();
+        for(int i =0;i<n;i++){
+            if(islower(s[i])){
+                result.push_back(s[i]);
+
+            }
+            else if (s[i]=='*'){
+                if(result.size()==0){
+                    result=result;
+                }
+                else{
+                    result.pop_back();
+                }
+            }
+            else if(s[i]=='%'){
+                if(result.size()==0){
+                    result=result;
+                }
+else{
+                reverse(result.begin(),result.end());}
+            }
+            else{
+                if(result.size()==0){
+                    result=result;
+                }
+               else{ result=result+result;
+               }
+               }
+            
+
+        }
+        return result;
+    }
+};
