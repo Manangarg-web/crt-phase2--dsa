@@ -1,0 +1,38 @@
+1]Binary Search is a searching technique used on a sorted array.
+Instead of checking every element one by one, it repeatedly divides the search space into half.
+
+2]We can use binary search when the array is sorted.
+
+3. Time Complexity
+
+Linear Search	O(n)
+Binary Search	O(log n)
+
+4. basic binary search code
+int binarySearch(vector<int>& nums, int target)
+{
+    int low = 0;
+    int high = nums.size() - 1;
+
+    while(low <= high)
+    {
+        int mid = low + (high - low) / 2;
+
+        if(nums[mid] == target)
+            return mid;
+
+        else if(nums[mid] < target)
+            low = mid + 1;
+
+        else
+            high = mid - 1;
+    }
+
+    return -1;
+}
+
+
+5]Use: mid = low + (high-low)/2; to avoid integer overflow.
+
+6]
+
