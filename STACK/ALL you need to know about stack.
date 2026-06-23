@@ -1,0 +1,125 @@
+A Stack is a data structure that follows:
+LIFO (Last In First Out)
+Example:
+Push 10
+Push 20
+Push 30
+Stack:
+30 <- Top
+20
+10
+Pop()
+
+Stack:
+20 <- Top
+10
+The last element inserted comes out first.
+Think of:
+
+Stack of plates
+Browser history
+Undo operation
+Function calls
+
+
+
+2. Basic Operations
+
+Operation	Meaning
+push(x)	Insert
+pop()	Remove top
+top()	Access top
+empty()	Check empty
+size()	Count elements
+
+
+3. STL Stack in C++
+#include <stack>
+using namespace std;
+
+stack<int> st;
+
+st.push(10);
+st.push(20);
+st.push(30);
+
+cout<<st.top();
+
+st.pop();
+
+cout<<st.top();
+output:
+30
+20
+
+4. Time Complexity
+Operation	TC
+push	O(1)
+pop	O(1)
+top	O(1)
+empty	O(1)
+
+
+5. When Should You Think About Stack?
+
+This is the most important part.
+Whenever you see:
+
+A. Nearest Something
+Nearest Greater Left
+Nearest Greater Right
+
+Nearest Smaller Left
+Nearest Smaller Right
+Use Stack.
+
+B. Matching Pairs
+()
+[] 
+{}
+
+Use Stack.
+
+C. Undo Operations
+Backspace
+Browser history
+Undo
+Use Stack.
+
+D. Expression Problems
+Infix
+Prefix
+Postfix
+Use Stack.
+
+E. Monotonic Problems
+Keywords:
+
+Next Greater Element
+Previous Greater Element
+Stock Span
+Histogram
+Rainwater
+
+Use Monotonic Stack.
+
+6. Monotonic Stack
+
+Most placement questions come from here.
+A stack that is:
+
+Increasing
+1
+2
+5
+8
+
+or
+
+Decreasing
+9
+7
+4
+1
+
+
