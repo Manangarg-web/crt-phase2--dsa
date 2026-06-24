@@ -1,0 +1,55 @@
+class myStack {
+	public:
+	stack<int> st;
+	int n;
+	myStack(int n) {
+		// Define Data Structures
+		this->n = n;
+	}
+	
+	bool isEmpty() {
+		if (st.empty()) {
+			return true;
+		}
+		else {
+			return false;
+		}
+		
+		// check if the stack is empty
+	}
+	
+	bool isFull() {
+		// check if the stack is full
+		if (st.size() == n) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	void push(int x) {
+		// inserts x at the top of the stack
+		if (st.size()<n) {
+			st.push(x);
+		}
+	}
+	
+	void pop() {
+		// removes an element from the top of the stack
+		if (!st.empty())
+			{st.pop(); }
+		
+	}
+	
+	int peek() {
+		// Returns the top element of the stack
+		if (!st.empty()) {
+			return st.top();
+		}
+		else {
+			return - 1;
+		}
+	}
+	
+};
