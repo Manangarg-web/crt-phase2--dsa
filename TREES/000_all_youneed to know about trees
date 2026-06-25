@@ -1,0 +1,231 @@
+Trees are one of the most important data structures in DSA. Almost every big company asks tree questions because they test recursion, DFS, BFS, problem-solving, and algorithmic thinking.
+
+A Tree is a non-linear hierarchical data structure made up of nodes connected by edges.
+
+Example:
+
+        1
+       / \
+      2   3
+     / \
+    4   5
+1 is connected to 2 and 3.
+2 is connected to 4 and 5.
+
+Unlike arrays or linked lists, trees branch into multiple paths.
+
+
+2. Terminologies
+
+Consider
+
+          A
+        / | \
+       B  C  D
+      / \
+     E   F
+Node
+
+Each element is called a node.
+
+A,B,C,D,E,F
+Root
+
+Topmost node.
+
+A
+Parent
+
+Node directly above another node.
+
+A is parent of B,C,D
+
+B is parent of E,F
+Child
+
+Node directly below another node.
+
+B,C,D are children of A
+Leaf Node
+
+Node with no children.
+
+C,D,E,F
+Internal Node
+
+Node having at least one child.
+
+A,B
+Edge
+
+Connection between two nodes.
+
+A-B
+A-C
+A-D
+B-E
+B-F
+
+Total edges = Nodes − 1
+
+
+3. Types of Trees
+General Tree
+
+Any number of children.
+
+      A
+    / | \
+   B C D
+Binary Tree
+
+Maximum two children.
+
+      A
+     / \
+    B   C
+Full Binary Tree
+
+Every node has either
+
+0 children
+2 children
+
+Example
+
+       A
+      / \
+     B   C
+    / \
+   D   E
+Perfect Binary Tree
+
+Every level completely filled.
+
+        A
+      /   \
+     B     C
+    / \   / \
+   D  E  F  G
+
+Nodes
+
+2^(h+1)-1
+Complete Binary Tree
+
+All levels full except maybe last.
+
+Last level filled from left.
+
+        A
+      /   \
+     B     C
+    / \   /
+   D  E  F
+Balanced Tree
+
+Height approximately
+
+log n
+
+Examples
+
+AVL
+Red Black Tree
+Skewed Tree
+
+Every node has only one child.
+
+Left skewed
+
+A
+|
+B
+|
+C
+|
+D
+
+Right skewed
+
+A
+ \
+  B
+   \
+    C
+
+Height
+
+n-1
+
+Worst case.
+
+4. Binary Tree Representation
+class TreeNode{
+public:
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+
+    TreeNode(int x){
+        val=x;
+        left=NULL;
+        right=NULL;
+    }
+};
+
+5. Tree Traversals
+imppp.
+There are two major categories.
+
+DFS
+Preorder
+Inorder
+Postorder
+BFS
+Level Order
+
+6. Preorder
+
+Order
+
+Root
+
+Left
+
+Right
+
+Tree
+
+      1
+     / \
+    2   3
+   / \
+  4   5
+
+Traversal
+
+1 2 4 5 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
